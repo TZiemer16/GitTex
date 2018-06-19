@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% eBook 
+% LaTeX Template
+% Version 1.0 (29/12/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Luis Cobo (luiscobogutierrez@gmail.com) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATIONS AND INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[oneside,40pt]{memoir} % Font size
+
+\input{structure_big.tex}
+
+\title{BIG} % Book title
+\author{Andy Ziemer} % Author
+\newcommand{\edition}{First Edition} % Book edition
+%----------------------------------------------------------------------------------------
+
+
+% STRUCT MORE
+\newcommand{\introductionvar}{introduction_big.tex}
+
+%1
+\newcommand{\chapterIvar}{poem/big_mud.tex}
+%2
+\newcommand{\chapterIIvar}{poem/im_a_big_boy.tex}
+%3
+\newcommand{\chapterIIIvar}{poem/big_ideas.tex}
+%6
+\newcommand{\chapterVIvar}{poem/big_opportunities.tex}
+%10
+\newcommand{\chapterXvar}{poem/a_big_pan_of_pizza.tex}
+%11
+\newcommand{\chapterXIvar}{poem/big_antlers.tex}
+%12
+\newcommand{\chapterXIIvar}{poem/big_poetry.tex}
+%13
+\newcommand{\chapterXIIIvar}{poem/big_rubber_ball.tex}
+%16
+\newcommand{\chapterXVIvar}{poem/voyage_to_the_big_land.tex}
+%17
+\newcommand{\chapterXVIIvar}{poem/this_big_sky_is_all_mine.tex}
+%18
+\newcommand{\chapterXVIIIvar}{poem/oceans_of_bigness_and_blueness.tex}
+%35
+\newcommand{\chapterXXXVvar}{poem/big_love.tex}
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty} % Suppress page numbering
+\begin{tikzpicture}[remember picture,overlay]
+\node [rectangle, rounded corners, fill=white, opacity=1, anchor=south west, minimum width=3cm, minimum height=10cm] (box) at (-0.5,-10) (box){}; % White rectangle - "minimum width/height" adjust the width and height of the box; "(-0.5,-10)" adjusts the position on the page
+\node[anchor=west, color01, xshift=-1.5cm, yshift=-10cm, text width=6.9cm, font=\sffamily\scriptsize] at (box.north){\edition}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, color01, xshift=-1.5cm, yshift=-1cm, text width=6.9cm, font=\sffamily\bfseries\scshape\Large] at (box.north){\thetitle}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, color01, xshift=-1.5cm, yshift=-8cm, text width=6.9cm, font=\sffamily\bfseries] at (box.north){\theauthor}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\end{tikzpicture}
+
+\newpage % Make sure the following content is on a new page
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the table of contents
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION SECTION
+%----------------------------------------------------------------------------------------
+
+\chapter*{Introduction} % Introduction chapter suppressed from the table of contents
+\input{\introductionvar}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\chaptersvar}{chapters_big.tex}
+\input{\chaptersvar}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
