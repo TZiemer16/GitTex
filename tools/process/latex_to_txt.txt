@@ -1,0 +1,7 @@
+This is a standard latex file
+More lines 
+Lorem Ipsum
+
+
+	Lorem Done 
+% signature one and two

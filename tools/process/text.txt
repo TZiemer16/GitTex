@@ -1,0 +1,6 @@
+This is a standard latex file
+More lines 
+Lorem Ipsum
+\quadDone
+\quadLorem Done 
+% signature one and two
