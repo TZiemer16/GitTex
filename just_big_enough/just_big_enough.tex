@@ -1,0 +1,60 @@
+\documentclass[12pt]{book}
+\usepackage{tikz}
+\usepackage{verse}
+\PassOptionsToPackage{bookmarks, colorlinks=false, hidelinks}{hyperref}
+% http://www.ctan.org/pkg/poetrytex
+\usepackage[numberpoems, clearpageafterpoem, useincipits]{poetrytex}
+
+\usepackage[pages=some]{background}
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=1,
+angle=0,
+contents={
+  \includegraphics[width=\paperwidth,height=\paperheight]{title_page_background.png}
+  }
+}
+
+% Use the PA5 paper size
+\usepackage[paperwidth=140mm,paperheight=216mm,top=2cm, bottom=2cm, outer=1.5cm, inner=1.5cm]{geometry}
+\renewcommand{\pttitle}{Just Big Enough}
+\renewcommand{\ptsubtitle}{TBD}
+\renewcommand{\ptauthor}{Andy Ziemer}
+\renewcommand{\ptdate}{June 24 2018}
+\renewcommand{\ptdedication}{}
+
+\begin{document}
+\BgThispage
+\maketitle
+\makededication
+\frontmatter
+
+% TOC %
+\maketoc
+
+% TOP %
+\renewcommand*{\topname}{Table of Poems}
+
+\maketop
+
+\section{Preface}
+This is a prose preface.
+
+\newpage
+\thispagestyle{empty}
+
+\mainmatter
+\newcommand{\introductionvar}{introduction_big.tex}
+
+%1
+\newcommand{\chapterIvar}{../poem/big_mud.tex}
+
+% chapters list
+\newcommand{\chaptersvar}{chapters.tex}
+
+\section{section 1}
+
+\input{\chaptersvar}
+
+\end{document}

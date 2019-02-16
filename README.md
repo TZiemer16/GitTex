@@ -1,2 +1,0 @@
-# GitTex
-book
